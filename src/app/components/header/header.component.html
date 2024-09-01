@@ -1,0 +1,19 @@
+<mat-toolbar color="dark">
+  <span>My Application</span>
+  <span class="spacer"></span>
+  <button mat-button>Home</button>
+  <button mat-button>About</button>
+  <button mat-button>Contact</button>
+
+  <button mat-icon-button [matMenuTriggerFor]="appMenu" [matMenuTriggerData]="{name: 'Bob'}">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-menu #appMenu="matMenu">
+  <ng-template matMenuContent let-name="name">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Log off {{name}}</button>
+  </ng-template>
+</mat-menu>
+
