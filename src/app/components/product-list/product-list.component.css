@@ -1,30 +1,3 @@
-/*.demo-table {*/
-/*  width: 100%;*/
-/*  color: black;*/
-/*}*/
-
-/*.mat-column-demo-position {*/
-/*  width: 32px;*/
-/*  border-right: 1px solid currentColor;*/
-/*  padding-right: 24px;*/
-/*  text-align: center;*/
-/*  color: black;*/
-/*}*/
-
-/*.mat-column-demo-name {*/
-/*  padding-left: 16px;*/
-/*  font-size: 20px;*/
-/*  color: black;*/
-/*}*/
-
-/*.mat-column-demo-weight {*/
-/*  font-style: italic;*/
-/*  color: black;*/
-/*}*/
-
-/*.mat-column-demo-symbol {*/
-/*  width: 32px;*/
-/*  text-align: center;*/
-/*  font-weight: bold;*/
-/*  color: black;*/
-/*}*/
+.table-container {
+  margin: 10vh 5vh 0 5vh;
+}

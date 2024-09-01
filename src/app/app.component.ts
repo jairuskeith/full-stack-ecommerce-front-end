@@ -9,6 +9,7 @@ import {MatToolbar} from "@angular/material/toolbar";
 import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from "./components/footer/footer.component";
 import {MatListItem} from "@angular/material/list";
+import {SideNavComponent} from "./components/side-nav/side-nav.component";
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,8 @@ import {MatListItem} from "@angular/material/list";
     MatToolbar,
     HeaderComponent,
     FooterComponent,
-    MatListItem
+    MatListItem,
+    SideNavComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

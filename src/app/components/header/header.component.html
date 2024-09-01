@@ -1,11 +1,30 @@
-<mat-toolbar color="dark">
-  <span>My Application</span>
+<mat-toolbar class="header">
+  <span>Full Stack eCommerce</span>
   <span class="spacer"></span>
-  <button mat-button>Home</button>
-  <button mat-button>About</button>
-  <button mat-button>Contact</button>
+  <button mat-button style="color: #CACACA">Home</button>
+  <button mat-button style="color: #CACACA">About</button>
+  <button mat-button style="color: #CACACA">Contact</button>
 
-  <button mat-icon-button [matMenuTriggerFor]="appMenu" [matMenuTriggerData]="{name: 'Bob'}">
+  <div class="container">
+    <mat-form-field class="search" appearance="outline">
+      <input matInput
+             class="search"
+             type="text"
+             placeholder="Enter search term"
+             [(ngModel)]="searchTerm">
+        <button matSuffix
+                *ngIf="searchTerm"
+                mat-icon-button
+                aria-label="Clear"
+                (click)="clearSearch()">
+          <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+  </div>
+
+  <button mat-icon-button
+    [matMenuTriggerFor]="appMenu"
+    [matMenuTriggerData]="{name: 'Bob'}">
     <mat-icon>more_vert</mat-icon>
   </button>
 </mat-toolbar>
