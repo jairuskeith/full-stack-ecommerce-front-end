@@ -10,6 +10,7 @@ import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from "./components/footer/footer.component";
 import {MatListItem} from "@angular/material/list";
 import {SideNavComponent} from "./components/side-nav/side-nav.component";
+import {SearchBarComponent} from "./components/search-bar/search-bar.component";
 
 @Component({
   selector: 'app-root',
@@ -32,7 +33,8 @@ import {SideNavComponent} from "./components/side-nav/side-nav.component";
     HeaderComponent,
     FooterComponent,
     MatListItem,
-    SideNavComponent
+    SideNavComponent,
+    SearchBarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

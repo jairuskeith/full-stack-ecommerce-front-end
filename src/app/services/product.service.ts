@@ -8,7 +8,7 @@ import { map, Observable } from "rxjs";
 })
 export class ProductService {
 
-  private baseUrl: string = 'http://localhost:8080/api/products';
+  private baseUrl: string = 'http://localhost:8080/api/products?size=100';
 
   constructor(private http: HttpClient) { }
 

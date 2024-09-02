@@ -13,6 +13,9 @@ import {
   MatTable, MatTableDataSource
 } from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
+import {FooterComponent} from "../footer/footer.component";
+import {SearchBarComponent} from "../search-bar/search-bar.component";
+import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 
 @Component({
   selector: 'app-product-list',
@@ -33,8 +36,12 @@ import {MatPaginator} from "@angular/material/paginator";
     MatHeaderRowDef,
     NgOptimizedImage,
     MatPaginator,
+    FooterComponent,
+    SearchBarComponent,
+    MatGridList,
+    MatGridTile,
   ],
-  templateUrl: './product-list-table.component.html',
+  templateUrl: './product-list-grid.component.html',
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent implements OnInit {

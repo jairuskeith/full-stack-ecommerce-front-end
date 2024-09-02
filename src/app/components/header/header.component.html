@@ -4,24 +4,6 @@
   <button mat-button style="color: #CACACA">Home</button>
   <button mat-button style="color: #CACACA">About</button>
   <button mat-button style="color: #CACACA">Contact</button>
-
-  <div class="container">
-    <mat-form-field class="search" appearance="outline">
-      <input matInput
-             class="search"
-             type="text"
-             placeholder="Enter search term"
-             [(ngModel)]="searchTerm">
-        <button matSuffix
-                *ngIf="searchTerm"
-                mat-icon-button
-                aria-label="Clear"
-                (click)="clearSearch()">
-          <mat-icon>close</mat-icon>
-        </button>
-    </mat-form-field>
-  </div>
-
   <button mat-icon-button
     [matMenuTriggerFor]="appMenu"
     [matMenuTriggerData]="{name: 'Bob'}">

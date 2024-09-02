@@ -1,0 +1,14 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let product of products">
+    <div class="product-box">
+      <img class="img-responsive"
+           src="{{ product.imageUrl }}"
+           alt=""
+           height="75"
+           width="75">
+      <h1> {{ product.name }} </h1>
+      <div> {{ product.unitPrice | currency: 'USD' }} </div>
+      <a href="#" class="primary-btn">Add to cart</a>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
