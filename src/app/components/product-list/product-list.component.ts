@@ -16,6 +16,7 @@ import {MatPaginator} from "@angular/material/paginator";
 import {FooterComponent} from "../footer/footer.component";
 import {SearchBarComponent} from "../search-bar/search-bar.component";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-product-list',
@@ -47,18 +48,26 @@ import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 export class ProductListComponent implements OnInit {
 
   protected products: Product[] = [];
-  protected displayedColumns: string[] = ['position', 'name', 'price', 'unitsInStock'];
-  protected dataSource: MatTableDataSource<Product, MatPaginator> =  new MatTableDataSource<Product>(this.products);
+  protected currentCategoryId: number = 1;
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.listProducts();
+    this.route.params.subscribe((data: Params): void => {
+        this.listProducts();
+    });
   }
 
   listProducts(): void {
-    this.productService.getProductList().subscribe(
+    const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');
+
+    if (hasCategoryId) {
+      this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!;
+    }
+
+    this.productService.getProductList(this.currentCategoryId).subscribe(
       (data: Product[]): void => {
         this.products = data
       }

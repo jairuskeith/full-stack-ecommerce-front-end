@@ -1,9 +1,19 @@
 <mat-toolbar class="header">
   <span>Full Stack eCommerce</span>
   <span class="spacer"></span>
-  <button mat-button style="color: #CACACA">Home</button>
-  <button mat-button style="color: #CACACA">About</button>
-  <button mat-button style="color: #CACACA">Contact</button>
+  <button mat-button>Home</button>
+  <button mat-button
+          routerLink="/category/1"
+          routerLinkActive="active-link">
+    Books
+  </button>
+  <button mat-button
+          routerLink="/category/2"
+          routerLinkActive="active-link">
+    Coffee Mugs
+  </button>
+  <button mat-button>Mouse Pads</button>
+  <button mat-button>Luggage Tags</button>
   <button mat-icon-button
     [matMenuTriggerFor]="appMenu"
     [matMenuTriggerData]="{name: 'Bob'}">
@@ -17,4 +27,3 @@
     <button mat-menu-item>Log off {{name}}</button>
   </ng-template>
 </mat-menu>
-
